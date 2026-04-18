@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addrita Biswas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="pf" id="pf">
+
+  <!-- HEADER -->
+  <div class="toprow">
+    <div>
+      <div class="greeting" id="greeting" data-text="নমস্কার,">নমস্কার,</div>
+      <div class="big-name">I'm Addrita Biswas.</div>
+      <div class="bio">
+        Computer Engineering student at Stony Brook University<br>
+        Writer, UI/UX designer, SWE<br>
+        Building human centered ideas through creative technology
+      </div>
+    </div>
+    <div class="topright">
+      <div class="location-clock">
+        <span class="loc-dot"></span>
+        <span class="location-text">BASED IN NYC</span>
+        <span class="loc-divider">·</span>
+        <span class="clock" id="clock">--:-- -- EST</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BENTO GRID -->
+  <div class="bento">
+
+    <!-- Experience -->
+    <div class="box">
+      <div class="box-head"><span class="box-title">Experience</span></div>
+      <div class="box-body">
+        <div class="row-item" onclick="openExp(0)"><span class="ri-label">Web & Digital Marketing Student Assistant</span><span class="arr">→</span></div>
+        <div class="row-item" onclick="openExp(1)"><span class="ri-label">Research & Marketing Intern</span><span class="arr">→</span></div>
+        <div class="row-item" onclick="openExp(2)"><span class="ri-label">Application Development Intern</span><span class="arr">→</span></div>
+        <div class="row-item" onclick="openExp(3)"><span class="ri-label">Awards &amp; Recognition</span><span class="arr">→</span></div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="box">
+      <div class="box-head"><span class="box-title">Projects</span></div>
+      <div class="box-body">
+        <div class="row-item" onclick="openProject(0)"><span class="ri-label">Your Daily Dough</span><span class="arr">→</span></div>
+        <div class="row-item" onclick="openProject(1)"><span class="ri-label">Notifi</span><span class="arr">→</span></div>
+        <div class="row-item" onclick="openProject(2)"><span class="ri-label">Intellect</span><span class="arr">→</span></div>
+        <div class="row-item" onclick="openProject(3)"><span class="ri-label">Writing Portfolio</span><span class="arr">→</span></div>
+      </div>
+    </div>
+
+    <!-- Guestbook -->
+    <div class="box guest">
+      <div class="box-head">
+        <span class="box-title">Guestbook</span>
+        <span class="box-badge badge-green" onclick="openGuest()">sign it →</span>
+      </div>
+      <div class="box-body">
+        <div class="g-notes-area" id="g-notes-area">
+          <div class="g-placeholder" id="g-placeholder">leave me a note!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="box">
+      <div class="box-head"><span class="box-title">Skills</span></div>
+      <div class="box-body">
+        <div class="chip-group">
+          <div class="chip-group-label">Engineering</div>
+          <div class="chips">
+            <span class="chip hi">C / C++</span>
+            <span class="chip hi">TypeScript</span>
+            <span class="chip">p5.js</span>
+            <span class="chip hi">React</span>
+            <span class="chip hi">Python</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">Javascript</span>
+            <span class="chip">R</span>
+          </div>
+        </div>
+        <div class="chip-group">
+          <div class="chip-group-label">Design</div>
+          <div class="chips">
+            <span class="chip hi">Figma</span>
+            <span class="chip hi">Canva</span>
+            <span class="chip">Adobe</span>
+            <span class="chip">Photoshop</span>
+          </div>
+        </div>
+        <div class="chip-group">
+          <div class="chip-group-label">Other</div>
+          <div class="chips">
+            <span class="chip hi">Journalism</span>
+            <span class="chip">Digital Marketing</span>
+            <span class="chip">Research</span>
+            <span class="chip">Git</span>
+            <span class="chip">Notion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Courses -->
+    <div class="box">
+      <div class="box-head">
+        <span class="box-title">Courses</span>
+        <span class="box-badge badge-gray">SBU</span>
+      </div>
+      <div class="box-body">
+        <div class="course-section-row" onclick="openCourse(0)">
+          <span class="ri-label">Computer Engineering</span><span class="arr">→</span>
+        </div>
+        <div class="course-section-row" onclick="openCourse(1)">
+          <span class="ri-label">Miscellaneous</span><span class="arr">→</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="foot">
+    <div class="foot-links">
+      <a class="foot-link" href="mailto:addritaside@gmail.com">addritaside@gmail.com</a>
+      <span class="foot-sep">·</span>
+      <a class="foot-link" href="mailto:addrita.biswas@stonybrook.edu">addrita.biswas@stonybrook.edu</a>
+    </div>
+    <div class="foot-r">
+      <a href="https://github.com/addritab" target="_blank" class="foot-icon-link">
+        <img class="foot-icon" src="github.svg" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/addrita-biswas-0162a6267" target="_blank" class="foot-icon-link">
+        <img class="foot-icon" src="linkedin.svg" alt="LinkedIn">
+      </a>
+      <img id="sun-toggle" class="sun-toggle" src="sun.svg" alt="toggle light mode" onclick="toggleMode()" title="toggle light / dark">
+    </div>
+  </div>
+
+  <!-- EXPERIENCE MODAL -->
+  <div class="overlay" id="exp-overlay" onclick="handleExpOverlay(event)">
+    <div class="cmodal">
+      <span class="btn-bare close-btn" onclick="closeExp()">✕</span>
+      <div class="cmodal-header">
+        <div class="cmodal-super">Experience</div>
+        <div class="cmodal-title" id="exp-title"></div>
+        <div class="exp-meta" id="exp-meta"></div>
+      </div>
+      <div class="cmodal-body">
+        <ul class="exp-bullets" id="exp-bullets"></ul>
+      </div>
+      <div class="cmodal-footer">
+        <span class="btn-bare" id="exp-prev" onclick="expNav(-1)">← Prev</span>
+        <div class="mpager" id="exp-pager">1 / 4</div>
+        <span class="btn-bare right" id="exp-next" onclick="expNav(1)">Next →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSE MODAL -->
+  <div class="overlay" id="course-overlay" onclick="handleCourseOverlay(event)">
+    <div class="cmodal">
+      <span class="btn-bare close-btn" onclick="closeCourse()">✕</span>
+      <div class="cmodal-header">
+        <div class="cmodal-super">Courses</div>
+        <div class="cmodal-title" id="cmodal-title">Computer Engineering</div>
+      </div>
+      <div class="cmodal-body">
+        <div class="ctags" id="cmodal-tags"></div>
+      </div>
+      <div class="cmodal-footer">
+        <span class="btn-bare" id="mprev" onclick="courseNav(-1)">← Prev</span>
+        <div class="mpager" id="mpager">1 / 2</div>
+        <span class="btn-bare right" id="mnext" onclick="courseNav(1)">Next →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUESTBOOK MODAL -->
+  <div class="overlay" id="guest-overlay" onclick="handleGuestOverlay(event)">
+    <div class="cmodal guest-cmodal">
+      <span class="btn-bare close-btn" onclick="closeGuest()">✕</span>
+      <div class="cmodal-header">
+        <div class="cmodal-super">Guestbook</div>
+        <div class="cmodal-title" id="guest-modal-title">Leave me a note.</div>
+      </div>
+
+      <!-- fixed-height shared input area -->
+      <div class="guest-input-area">
+
+        <!-- NOTE MODE -->
+        <div id="note-mode" class="guest-panel">
+          <div class="g-name-row">
+            <span class="g-name-label">Name</span>
+            <input class="g-name-input" id="g-name" placeholder="your name..." maxlength="40" autocomplete="off">
+          </div>
+          <div class="g-msg-area">
+            <textarea class="g-msg-textarea" id="g-msg" placeholder="write something..." maxlength="200"></textarea>
+          </div>
+        </div>
+
+        <!-- SKETCH MODE -->
+        <div id="sketch-mode" class="guest-panel" style="display:none;">
+          <div class="g-name-row">
+            <span class="g-name-label">Name</span>
+            <input class="g-name-input" id="g-name-sketch" placeholder="your name..." maxlength="40" autocomplete="off">
+          </div>
+          <canvas id="sketch-canvas" class="sketch-canvas"></canvas>
+        </div>
+
+      </div>
+
+      <div class="cmodal-footer guest-footer">
+        <span class="box-badge badge-green guest-mode-btn" id="sketch-toggle-btn" onclick="toggleSketchMode()">SKETCH INSTEAD →</span>
+        <span class="btn-bare" id="sketch-clear-btn" onclick="clearSketch()" style="display:none;">clear</span>
+        <span class="btn-bare right" onclick="submitNote()">Send →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT MODAL -->
+  <div class="overlay" id="proj-overlay" onclick="handleProjOverlay(event)">
+    <div class="cmodal">
+      <span class="btn-bare close-btn" onclick="closeProject()">✕</span>
+      <div class="cmodal-header">
+        <div class="cmodal-super">Projects</div>
+        <div class="cmodal-title" id="proj-title"></div>
+      </div>
+      <div class="cmodal-body" style="display:flex;flex-direction:column;padding-bottom:0;">
+        <div class="proj-slideshow">
+          <div class="proj-slide-wrap" id="proj-slide-wrap">
+            <!-- slides injected by JS -->
+          </div>
+          <div class="proj-dots" id="proj-dots"></div>
+        </div>
+        <div class="proj-desc" id="proj-desc"></div>
+      </div>
+      <div class="cmodal-footer">
+        <span class="btn-bare" id="proj-prev" onclick="projNav(-1)">← Prev</span>
+        <div class="mpager" id="proj-pager">1 / 4</div>
+        <span class="btn-bare right" id="proj-next" onclick="projNav(1)">Next →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE LIGHTBOX -->
+  <div class="note-lightbox" id="note-lightbox" onclick="handleLightboxClick(event)">
+    <div class="note-lightbox-card" id="lightbox-card">
+      <div class="note-lightbox-name" id="lightbox-name"></div>
+      <div class="note-lightbox-msg" id="lightbox-msg" style="display:none;"></div>
+      <img class="note-lightbox-img" id="lightbox-img" style="display:none;" alt="sketch">
+    </div>
+    <div style="display:flex;gap:12px;align-items:center;position:relative;">
+      <button class="note-lightbox-close" onclick="closeLightbox()">close ✕</button>
+      <button class="lightbox-delete-btn" onclick="openDeletePrompt()">Delete?</button>
+      <div class="delete-prompt" id="delete-prompt">
+        <div class="delete-prompt-label">Enter password to delete</div>
+        <input class="delete-prompt-input" id="delete-pw" type="password" placeholder="password..." autocomplete="off">
+        <div class="delete-error" id="delete-error">Incorrect password.</div>
+        <div class="delete-prompt-row">
+          <button class="delete-cancel-btn" onclick="closeDeletePrompt()">Cancel</button>
+          <button class="delete-confirm-btn" onclick="confirmDelete()">Delete ✕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -201,20 +201,22 @@
 
         <!-- NOTE MODE -->
         <div id="note-mode" class="guest-panel">
-          <div class="g-name-row">
+          <div class="g-name-row" id="name-row-note">
             <span class="g-name-label">Name</span>
-            <input class="g-name-input" id="g-name" placeholder="your name..." maxlength="40" autocomplete="off">
+            <input class="g-name-input" id="g-name" maxlength="40" autocomplete="off">
+            <span class="name-warn-badge" id="name-warn-note">required</span>
           </div>
           <div class="g-msg-area">
-            <textarea class="g-msg-textarea" id="g-msg" placeholder="write something..." maxlength="200"></textarea>
+            <textarea class="g-msg-textarea" id="g-msg" maxlength="200"></textarea>
           </div>
         </div>
 
         <!-- SKETCH MODE -->
         <div id="sketch-mode" class="guest-panel" style="display:none;">
-          <div class="g-name-row">
+          <div class="g-name-row" id="name-row-sketch">
             <span class="g-name-label">Name</span>
             <input class="g-name-input" id="g-name-sketch" placeholder="your name..." maxlength="40" autocomplete="off">
+            <span class="name-warn-badge" id="name-warn-sketch">required</span>
           </div>
           <canvas id="sketch-canvas" class="sketch-canvas"></canvas>
         </div>
@@ -223,7 +225,7 @@
 
       <div class="cmodal-footer guest-footer">
         <span class="box-badge badge-green guest-mode-btn" id="sketch-toggle-btn" onclick="toggleSketchMode()">SKETCH INSTEAD →</span>
-        <span class="btn-bare" id="sketch-clear-btn" onclick="clearSketch()" style="display:none;">clear</span>
+        <span class="btn-bare" id="sketch-clear-btn" onclick="clearSketch()" style="display:none;">Clear</span>
         <span class="btn-bare right" onclick="submitNote()">Send →</span>
       </div>
     </div>
@@ -262,12 +264,12 @@
       <img class="note-lightbox-img" id="lightbox-img" style="display:none;" alt="sketch">
     </div>
     <div style="display:flex;gap:12px;align-items:center;position:relative;">
-      <button class="note-lightbox-close" onclick="closeLightbox()">close ✕</button>
+      <button class="note-lightbox-close" onclick="closeLightbox()">Close ✕</button>
       <button class="lightbox-delete-btn" onclick="openDeletePrompt()">Delete?</button>
       <div class="delete-prompt" id="delete-prompt">
         <div class="delete-prompt-label">Enter password to delete</div>
         <input class="delete-prompt-input" id="delete-pw" type="password" placeholder="password..." autocomplete="off">
-        <div class="delete-error" id="delete-error">Incorrect password.</div>
+        <div class="delete-error" id="delete-error">Incorrect password</div>
         <div class="delete-prompt-row">
           <button class="delete-cancel-btn" onclick="closeDeletePrompt()">Cancel</button>
           <button class="delete-confirm-btn" onclick="confirmDelete()">Delete ✕</button>

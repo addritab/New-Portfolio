@@ -1305,6 +1305,12 @@ body.light-mode .box:hover {
   background: var(--bg2);
 }
 
+/* name warn badge same in both modes — red is intentional */
+.light-mode .g-name-row.name-warn .g-name-input,
+body.light-mode .g-name-row.name-warn .g-name-input {
+  border-bottom-color: #c0392b;
+}
+
 /* ── LIGHT MODE ROW ITEMS / ARROWS ── */
 .light-mode .row-item,
 body.light-mode .row-item {
